@@ -14,16 +14,20 @@ public class Main {
 		boolean isYes = false;
 		String response = mainInput.nextLine();
 		
-		if (response == "y") {
+		if (response.equals("y")) {
 			isYes = true;
 			
+			while(isYes) {
+				welcomeDisplay();
+				BankApp bankApp = new BankApp();
+				bankApp.addMoney(4546);
+				System.out.println(bankApp);
+			}
+			
+		} else {
+			goodbyeDisplay();
 		}
 		
-		while(!isYes) {
-			BankApp bankApp = new BankApp();
-			bankApp.addMoney(4546);
-			System.out.println(bankApp);
-		}
 //		Scanner input = new Scanner(System.in);
 //		Account account = new Account(input.nextLine());
 //		BankApp app = new BankApp(account);
@@ -32,9 +36,11 @@ public class Main {
 		
 	}
 	
-	static void welcomeDisplay(boolean bool) {
-		if(!bool) System.out.print("Have a nice day!");
-		System.out.println("Welcome to Revature Bank");
-		
+	static void welcomeDisplay() {
+		System.out.println("Welcome to Revature Bank");	
+	}
+	
+	static void goodbyeDisplay() {
+		System.out.print("Have a nice day!");	
 	}
 }
