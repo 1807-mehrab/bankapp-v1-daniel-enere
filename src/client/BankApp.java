@@ -1,6 +1,7 @@
 package client;
 
 import operations.Account;
+import operations.User;
 
 public class BankApp {
 	private int totalAccountsOpen;
@@ -9,7 +10,7 @@ public class BankApp {
 	private Account account;
 
 	
-	public BankApp(Account account) {
+	public BankApp() {
 		this.totalAccountsOpen = Account.getNumOfAccounts();
 		this.checkBalance = account.getBalance();
 		setUser(account.getAccountHolder());

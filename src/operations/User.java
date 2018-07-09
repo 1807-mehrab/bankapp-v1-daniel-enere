@@ -15,12 +15,16 @@ public class User {
 	
 	public User() {
 		UserInfoParser userInfo = new UserInfoParser();
-		userInfo.setName();
-		userInfo.setCityInput();
+		userInfo.setNameInput();
 		
-		userInfo.setSocialSecurityNumber();
-		this.name = userInfo.getName();
-		this.socialSecurityNumber = userInfo.getSocialSecurityNumber();
+		userInfo.setStreetAddressInput();
+		userInfo.setCityInput();
+		userInfo.setStateInput();
+		
+		userInfo.setSocialSecurityNumberInput();
+		userInfo.setAgeInput();
+		this.name = userInfo.getNameInput();
+		this.socialSecurityNumber = userInfo.getSocialSecurityNumberInput();
 		this.city = userInfo.getCityInput();
 		
 	}
@@ -64,7 +68,7 @@ public class User {
 	
 	@Override
 	public String toString() {
-		return this.getName() + " " + this.getCity();
+		return "The user " + this.getName() + " lives in " + this.getCity();
 		
 	}
 	

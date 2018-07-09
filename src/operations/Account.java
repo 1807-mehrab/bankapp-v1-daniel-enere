@@ -7,9 +7,10 @@ public class Account implements WithdrawalInterface, DepositInterface {
 	private String accountHolder;
 	private double balance;
 	private static int numOfAccounts;
+	private User user;
 	
-	public Account(String name) {
-		this.accountHolder = name;
+	public Account() {
+		this.accountHolder = user.getName();
 	}
 
 	public double getBalance() {
