@@ -10,7 +10,7 @@ class AccountTest {
 
 	@Test
 	void getAccountBalance() {
-		Account account = new Account("Daniel");
+		Account account = new Account();
 		
 		account.setBalance(100.00);
 		
@@ -20,7 +20,7 @@ class AccountTest {
 	
 	@Test
 	void getAccountHolder() {
-		Account account = new Account("Daniel");
+		Account account = new Account();
 		
 		assertEquals("Daniel", account.getAccountHolder());
 		
