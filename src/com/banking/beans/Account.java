@@ -1,11 +1,10 @@
-package operations;
+package com.banking.beans;
 
 import java.util.*;
 
 import com.bank.util.Populate;
 import com.bank.util.RandomNumGenerator;
-
-import operations.User;
+import com.banking.beans.User;
 
 public class Account {
 	private int accountNum;
@@ -14,7 +13,12 @@ public class Account {
 	private User user;
 	
 	public Account() {
-		
+		numOfAccounts++;
+	}
+	
+	public Account(User user) {
+		this();
+		this.user = user;
 	}
 
 	public int getAccountNum() {

@@ -1,13 +1,9 @@
-package client;
+package com.banking.client;
 
 import com.bank.util.Populate;
-
-import operations.Account;
-import operations.User;
+import com.banking.beans.Account;
 
 public class BankApp {
-	private int totalAccountsOpen;
-	private String userName;
 	private double checkBalance;
 	private Account account;
 
@@ -29,6 +25,17 @@ public class BankApp {
 		account.setBalance(account.getBalance() - withdrawalAmount);
 	}
 	
+	public String getUserName() {
+		return account.getUser().getName();
+	}
+	
+	public int getAllAccounts() {
+		return Account.getNumOfAccounts();
+	}
+	
+	public Account createAnAccount() {
+		return new Account(account.getUser());
+	}
 	
 
 	

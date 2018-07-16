@@ -1,0 +1,5 @@
+connections.properties
+bin/
+.classpath
+.project
+.settings/

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import operations.Account;
+import com.banking.beans.Account;
 
 class AccountTest {
 
@@ -21,8 +21,9 @@ class AccountTest {
 	@Test
 	void getAccountHolder() {
 		Account account = new Account();
+		account.getUser().setName("Daniel");
 		
-		assertEquals("Daniel", account.getAccountHolder());
+		assertEquals("Daniel", account.getUser().getName());
 		
 	}
 

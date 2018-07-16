@@ -2,9 +2,9 @@ package com.bank.util;
 
 import java.util.Scanner;
 
-import client.Main;
-import operations.Account;
-import operations.User;
+import com.banking.beans.Account;
+import com.banking.beans.User;
+import com.banking.client.Main;
 
 public class Populate {
 	

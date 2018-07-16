@@ -1,7 +1,6 @@
-package operations;
+package com.banking.beans;
 
 import java.util.Scanner;
-import operations.UserInfoParser;
 
 public class User {
 	
@@ -11,9 +10,10 @@ public class User {
 	private String streetAddress;
 	private String city;
 	private String state;
+	private static int numOfUsers;
 	
 	public User() {
-		
+		numOfUsers++;
 	}
 	
 	public String getName() {
@@ -57,6 +57,10 @@ public class User {
 	public String toString() {
 		return "The user " + this.getName() + " lives in " + this.getCity();
 		
+	}
+
+	public static int getNumOfUsers() {
+		return numOfUsers;
 	}
 	
 }

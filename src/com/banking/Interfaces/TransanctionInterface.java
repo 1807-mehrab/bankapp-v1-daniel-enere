@@ -1,4 +1,6 @@
-package operations;
+package com.banking.Interfaces;
+
+import com.banking.beans.Account;
 
 public interface TransanctionInterface {
 	public void accountDeposit(double amountToDeposit);
