@@ -4,28 +4,15 @@ import java.util.Scanner;
 import operations.UserInfoParser;
 
 public class User {
-	Scanner input = new Scanner(System.in);
 	
 	private String name;
-	private int socialSecurityNumber;
+	private long socialSecurityNumber;
 	private int age;
 	private String streetAddress;
 	private String city;
 	private String state;
 	
 	public User() {
-		UserInfoParser userInfo = new UserInfoParser();
-		userInfo.setNameInput();
-		
-		userInfo.setStreetAddressInput();
-		userInfo.setCityInput();
-		userInfo.setStateInput();
-		
-		userInfo.setSocialSecurityNumberInput();
-		userInfo.setAgeInput();
-		this.name = userInfo.getNameInput();
-		this.socialSecurityNumber = userInfo.getSocialSecurityNumberInput();
-		this.city = userInfo.getCityInput();
 		
 	}
 	
@@ -35,10 +22,10 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getSocialSecurityNumber() {
+	public long getSocialSecurityNumber() {
 		return socialSecurityNumber;
 	}
-	public void setSocialSecurityNumber(int socialSecurityNumber) {
+	public void setSocialSecurityNumber(long socialSecurityNumber) {
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
 	public int getAge() {

@@ -1,45 +1,41 @@
 package client;
 
+import com.bank.util.Populate;
+
 import operations.Account;
 import operations.User;
 
 public class BankApp {
 	private int totalAccountsOpen;
-	private String user;
+	private String userName;
 	private double checkBalance;
 	private Account account;
 
 	
 	public BankApp() {
-		this.totalAccountsOpen = Account.getNumOfAccounts();
-		this.checkBalance = account.getBalance();
-		setUser(account.getAccountHolder());
-	}
-
-	public int getTotalAccountsOpen() {
-		
-		return totalAccountsOpen;
-	}
-
-	public String getUser() {
-		return user;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
+		Account account = new Account();
+		this.account = Populate.populateAccount(account);
 	}
 	
-	public void addMoney(int money) {
-		account.accountDeposit(money);
+	public double checkBalance() {
+		return this.account.getBalance();
 	}
+	
+	public void deposit (double depositAmount) {
+		account.setBalance(account.getBalance() + depositAmount); 
+	}
+	
+	public void withdraw (double withdrawalAmount) {
+		account.setBalance(account.getBalance() - withdrawalAmount);
+	}
+	
+	
 
-	public double getCheckBalance() {
-		return this.checkBalance;
-	}
+	
 	
 	@Override
 	public String toString() {
-		return this.user + " has $" + this.checkBalance + " in his account " ;
+		return this.account.getUser().getName() + " has $" + this.checkBalance + " in his account " ;
 		
 	}
 	
